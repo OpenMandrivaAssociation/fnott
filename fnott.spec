@@ -47,9 +47,9 @@ Zsh command-line completion support for %{name}
 %{_bindir}/fnott
 %{_bindir}/fnottctl
 
-%{_mandir}/man1/fnott.1%{?ext_man}
-%{_mandir}/man1/fnottctl.1%{?ext_man}
-%{_mandir}/man5/fnott.ini.5%{?ext_man}
+#{_mandir}/man1/fnott.1%{?ext_man}
+#{_mandir}/man1/fnottctl.1%{?ext_man}
+#{_mandir}/man5/fnott.ini.5%{?ext_man}
 
 %dir %{_datadir}/doc/%{name}
 %license %{_datadir}/doc/%{name}/LICENSE
