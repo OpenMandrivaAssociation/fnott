@@ -1,15 +1,14 @@
 Name:           fnott
 Version:        1.4.1
-Release:        0
+Release:        1
 Summary:        Lightweight notification daemon for Wayland
 License:        MIT
-Group:          System/GUI/Other
+Group:          System/GUI/Wayland
 URL:            https://codeberg.org/dnkl/fnott
-Source0:        https://codeberg.org/dnkl/fnott/archive/%{version}.tar.gz
-Patch1:         https://codeberg.org/dnkl/fnott/commit/bc80e607b14e4c25639d9414e646bbaa7d534adc.patch#/0001-memfd-noexec-seal.patch
+Source0:        https://codeberg.org/dnkl/fnott/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  meson >= 0.58
 BuildRequires:  pkgconfig
-BuildRequires:  python3
+BuildRequires:  python
 BuildRequires:  scdoc
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(fcft) < 4.0.0
@@ -21,11 +20,6 @@ BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-cursor)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(wayland-scanner)
-%if 0%{?sle_version} >= 150400
-BuildRequires:  gcc11
-%else
-BuildRequires:  gcc >= 8
-%endif
 
 %description
 Lightweight notification daemon for Wayland.
@@ -37,18 +31,13 @@ Lightweight notification daemon for Wayland.
 Summary:        Zsh Completion for %{name}
 Group:          System/Shells
 Requires:       zsh
-Supplements:    (%{name} and zsh)
 BuildArch:      noarch
 
 %description    zsh-completion
 Zsh command-line completion support for %{name}
 
 %build
-%meson \
-%if 0%{?sle_version} == 150400 && 0%{?is_opensuse}
-  -Dc_std=c11 \
-%endif
-  -Db_lto=true
+%meson
 %meson_build
 
 %install
