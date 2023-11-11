@@ -50,6 +50,9 @@ Zsh command-line completion support for %{name}
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/fnott.ini
 %{_datadir}/applications/fnott.desktop
+%{_mandir}/man1/fnott.1.*
+%{_mandir}/man1/fnottctl.1.*
+%{_mandir}/man5/fnott.ini.5.*
 
 %files zsh-completion
 %{_datadir}/zsh/site-functions/_fnott
