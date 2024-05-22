@@ -47,6 +47,8 @@ Zsh command-line completion support for %{name}
 %{_bindir}/fnott
 %{_bindir}/fnottctl
 %{_sysconfdir}/xdg/fnott/fnott.ini
+%{_prefix}/lib/systemd/user/fnott.service
+%{_datadir}/dbus-1/services/fnott.service
 %doc %{_datadir}/doc/%{name}/
 #dir %{_datadir}/%{name}/
 #{_datadir}/%{name}/fnott.ini
