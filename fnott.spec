@@ -36,6 +36,16 @@ BuildArch:      noarch
 %description    zsh-completion
 Zsh command-line completion support for %{name}
 
+%package        fish-completion
+Summary:        Fish Completion for %{name}
+Group:          System/Shells
+Requires:       fish
+BuildArch:      noarch
+
+%description    fish-completion
+Fish command-line completion support for %{name}
+
+
 %build
 %meson
 %meson_build
@@ -60,3 +70,7 @@ Zsh command-line completion support for %{name}
 %files zsh-completion
 %{_datadir}/zsh/site-functions/_fnott
 %{_datadir}/zsh/site-functions/_fnottctl
+
+%files fish-completion
+%{_datadir}/fish/vendor_completions.d/fnott.fish
+%{_datadir}/fish/vendor_completions.d/fnottctl.fish
