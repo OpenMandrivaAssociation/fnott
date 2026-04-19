@@ -39,7 +39,7 @@ Zsh command-line completion support for %{name}
 %package        fish-completion
 Summary:        Fish Completion for %{name}
 Group:          System/Shells
-Requires:       fish
+Recommends:       fish
 BuildArch:      noarch
 
 %description    fish-completion
