@@ -1,5 +1,5 @@
 Name:           fnott
-Version:        1.7.1
+Version:        1.8.0
 Release:        1
 Summary:        Lightweight notification daemon for Wayland
 License:        MIT
